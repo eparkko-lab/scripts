@@ -6,6 +6,22 @@ param(
 
 )
 
+if (($Domain -eq "") -or ($Domain -eq $null ))
+{
+    Write-Output "Need to set -Domain parameter"
+    exit 1
+}
+if (($Password -eq "") -or ($Password -eq $null ))
+{
+    Write-Output "Need to set -Password parameter"
+    exit 1
+}
+if (($ComputerName -eq "") -or ($ComputerName -eq $null ))
+{
+    Write-Output "Need to set -ComputerName parameter"
+    exit 1
+}
+
 Write-Output "Renaming Computer to: $ComputerName"
 Rename-Computer -NewName $ComputerName
 
