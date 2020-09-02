@@ -1,9 +1,7 @@
 param(    
     [string]$Domain,
-    [string]$Password
+    [string]$Password,
     [string]$ComputerName
-
-
 )
 
 if (($Domain -eq "") -or ($Domain -eq $null ))
